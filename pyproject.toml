@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kognic-clip"
+version = "1.0.0"
+description = ""
+authors = [
+    { name="OpenAI" }
+]
+dependencies = [
+    "ftfy",
+    "packaging",
+    "regex",
+    "tqdm",
+    "torch",
+    "torchvision"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest"
+]
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"]
+
+[tool.setuptools]
+include-package-data = true
